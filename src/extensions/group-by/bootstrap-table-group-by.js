@@ -211,7 +211,7 @@
 
                 this.options.groupByField = typeof this.options.groupByField === 'string' ?
                     this.options.groupByField.replace('[', '').replace(']', '')
-                        .replace(/ /g, '').toLowerCase().split(',') : this.options.groupByField;
+                        .replace(/ /g, '')/*.toLowerCase()*/.split(',') : this.options.groupByField;
 
                 data = makeGrouped(this, data ? data : this.options.data);
             }
